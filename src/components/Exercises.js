@@ -9,8 +9,10 @@ import Loader from './Loader';
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [exercisesPerPage] = useState(6);
+  const [loading,setLoading] =  useState(false)
 
   useEffect(() => {
+    setLoading(true)
     const fetchExercisesData = async () => {
       let exercisesData = [];
 
@@ -21,6 +23,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       }
 
       setExercises(exercisesData);
+      setLoading(false)
     };
 
     fetchExercisesData();
@@ -37,7 +40,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     window.scrollTo({ top: 1800, behavior: 'smooth' });
   };
 
-  if (!currentExercises.length) return <div id="exercises">
+  if (loading) return <div id="exercises">
       <Loader />
     </div>
 
@@ -45,9 +48,11 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     <Box id="exercises" sx={{ mt: { lg: '109px' } }} mt="50px" p="20px">
       <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">Showing Results</Typography>
       <Stack direction="row" sx={{ gap: { lg: '107px', xs: '50px' } }} flexWrap="wrap" justifyContent="center">
-        {currentExercises.map((exercise, idx) => (
+        {currentExercises.length?currentExercises.map((exercise, idx) => (
           <ExerciseCard key={idx} exercise={exercise} />
-        ))}
+        )):(
+        <div>No exercises found</div>
+        )}
       </Stack>
       <Stack sx={{ mt: { lg: '114px', xs: '70px' } }} alignItems="center">
         {exercises.length > 9 && (
