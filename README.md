@@ -1,4 +1,4 @@
-[Deployed site](https://lambent-faun-fd75c3.netlify.app/)
+[Deployed site](https://fit-buddy-prod.netlify.app/)
 
 **Fit-Buddy** is a fitness companion app designed to help users discover exercises tailored to specific muscle groups. Built with ReactJS, JavaScript, and powered by Rapid API, Fit-Buddy organizes exercises into easy-to-navigate categories based on targeted muscles. Each exercise entry provides a concise overview of its benefits and includes step-by-step guidance. Plus, integrated YouTube video tutorials make learning each move simple and effective, so users can confidently follow along and perfect their form.
 # Getting Started with Create React App
