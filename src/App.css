@@ -60,7 +60,7 @@ body {
   width: 700px;
   height: 900px;
   margin-top: -330px;
-
+  z-index: -10;
 }
 
 .exercise-card {

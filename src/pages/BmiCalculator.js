@@ -35,6 +35,7 @@ const BmiCalculator = ({setPage}) => {
     // ];
   return (
       <Box
+        m={"auto"}
         sx={{
             '& .MuiTextField-root': { width:"250px", mt:"25px" },
         }}

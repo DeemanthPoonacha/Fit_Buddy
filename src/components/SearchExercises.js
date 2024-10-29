@@ -28,9 +28,9 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
                || item.equipment.toLowerCase().includes(search)
                || item.bodyPart.toLowerCase().includes(search),
       );
-        document.getElementById('#exercises').scrollIntoView()
-
-      window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
+      document.getElementById('exercises').scrollIntoView()
+      window?.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
+      console.log(exercisesData,searchedExercises);
 
       setSearch('');
       setExercises(searchedExercises);

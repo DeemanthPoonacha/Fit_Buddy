@@ -13,7 +13,7 @@ const App = () => {
   const [page, setPage] = useState('home');
 
   return (
-    <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
+    <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto" height={"100vh"} display={"flex"} flexDirection={"column"}>
       <Navbar page={page}/>
       <Routes>
         <Route path="/" element={<Home setPage={setPage}/>} />
