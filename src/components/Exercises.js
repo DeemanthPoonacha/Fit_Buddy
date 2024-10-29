@@ -27,7 +27,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     };
 
     fetchExercisesData();
-  }, [bodyPart]);
+  }, [bodyPart, setExercises, setLoading]);
 
   // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;

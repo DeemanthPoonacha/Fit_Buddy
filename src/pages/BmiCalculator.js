@@ -1,12 +1,12 @@
-import { Box, Button, InputAdornment, MenuItem, OutlinedInput, Stack, TextField, Typography } from '@mui/material';
-import React, { useEffect, useState } from 'react'
+import { Box, Button, InputAdornment, Stack, TextField, Typography } from '@mui/material';
+import React, { useState } from 'react'
 import { bmiOptions , fetchData} from '../utils/fetchData';
 
 const BmiCalculator = ({setPage}) => {
     setPage('bmi')//onClick={handleSearch}
     const [weight, setWeight] = useState();
-    const [weightMetric, setWeightMetric] = useState('kg');
-    const [heightMetric, setHeightMetric] = useState('mts');
+    const [weightMetric] = useState('kg');
+    const [heightMetric] = useState('mts');
     const [height, setHeight] = useState();
     const [bmi, setBmi] = useState(0)
 
@@ -22,7 +22,7 @@ const BmiCalculator = ({setPage}) => {
     // }, [])
     
 
-    let handleChange = () => { }
+    // let handleChange = () => { }
     // const weightMetrics = [
     //     {
     //         value: 'kg',

@@ -36,7 +36,7 @@ const ExerciseDetail = ({setPage}) => {
 
     fetchExercisesData();
     setPage('detail');
-  }, [id]);
+  }, [id, setPage]);
 
   if (!exerciseDetail) return <div>No Data</div>;
 

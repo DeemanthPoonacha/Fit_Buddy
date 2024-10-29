@@ -1,7 +1,6 @@
 import React from 'react';
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import Logo from '../assets/images/logo-full.png';
-import { Link } from 'react-router-dom';
 
 const Footer = () => (
   <Box mt="auto" bgcolor="#FFF3F4">
